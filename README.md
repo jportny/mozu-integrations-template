@@ -24,5 +24,3 @@ To run the example follow the following steps:
 9. Under "Settings | Applications" you should see your application listed.  Click on it.
 10. Click "Configuration" and the "Mozu Template Example Connector" application should appear in a modal window.    
 
- 
- 
