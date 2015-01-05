@@ -5,8 +5,6 @@ import java.util.List;
 import javax.annotation.PreDestroy;
 
 import org.apache.http.HttpStatus;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.mozu.api.ApiContext;
@@ -17,6 +15,7 @@ import com.mozu.api.events.EventManager;
 import com.mozu.api.events.handlers.CartEventHandler;
 import com.mozu.api.events.model.EventHandlerStatus;
 import com.mozu.api.resources.commerce.CartResource;
+import com.mozu.logger.MozuAppLogger;
 
 /**
  * A sample event handler. This handler is only responsible for performing
@@ -30,7 +29,7 @@ import com.mozu.api.resources.commerce.CartResource;
 @Component
 public class CartEventHandlerImpl implements CartEventHandler {
 
-    private static final Logger logger = LoggerFactory.getLogger(CartEventHandlerImpl.class);
+    private static final MozuAppLogger logger = MozuAppLogger.getLogger(CartEventHandlerImpl.class);
     
     public CartEventHandlerImpl() {
     }

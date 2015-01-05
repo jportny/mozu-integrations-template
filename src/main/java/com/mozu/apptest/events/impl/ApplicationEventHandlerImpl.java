@@ -4,8 +4,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.apache.http.HttpStatus;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,10 +14,11 @@ import com.mozu.api.events.handlers.ApplicationEventHandler;
 import com.mozu.api.events.model.EventHandlerStatus;
 import com.mozu.apptest.handlers.ConfigHandler;
 import com.mozu.base.utils.ApplicationUtils;
+import com.mozu.logger.MozuAppLogger;
 
 @Component
 public class ApplicationEventHandlerImpl implements ApplicationEventHandler {
-    private static final Logger logger = LoggerFactory.getLogger(ApplicationEventHandlerImpl.class);
+    private static final MozuAppLogger logger = MozuAppLogger.getLogger(ApplicationEventHandlerImpl.class);
 
     @Autowired
     ConfigHandler configHandler;

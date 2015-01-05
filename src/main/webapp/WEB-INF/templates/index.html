@@ -37,7 +37,9 @@
 					<a class="button tab active" data-toggle="tab"
 						data-tab-id="aboutTab" data-hide-save="true" th:text="#{tab.information}"></a> 
 					<a class="button tab" data-toggle="tab" data-tab-id="templateTab"
-						data-hide-save="true" th:text="#{tab.template}"></a>
+						data-hide-save="true" th:text="#{tab.template}"></a><a
+                        id="logMessagesLink" class="button tab" data-toggle="tab"
+                        data-tab-id="logMessagesTab" data-hide-save="false">Log Messages</a>
 				</div>
 				
 				<div class="tab-view">
@@ -47,6 +49,9 @@
 					<div class="tab-section template" style="display: none" id="templateTab">
 						<div th:include="template :: content"></div>
 					</div>
+                    <div class="tab-section template" style="display: none" id="logMessagesTab">
+                        <div th:include="log_messages :: content"></div>
+                    </div>
 				</div>
 
 				<div class="footer-actions">
