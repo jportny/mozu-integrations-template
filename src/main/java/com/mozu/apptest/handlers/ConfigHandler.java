@@ -1,5 +1,7 @@
 package com.mozu.apptest.handlers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -7,13 +9,13 @@ import com.mozu.api.ApiContext;
 import com.mozu.api.MozuApiContext;
 import com.mozu.api.contracts.mzdb.EntityList;
 import com.mozu.api.contracts.mzdb.IndexedProperty;
+import com.mozu.apptest.controllers.AdminController;
 import com.mozu.apptest.model.Constants;
 import com.mozu.apptest.model.Setting;
 import com.mozu.base.handlers.EntityHandler;
 import com.mozu.base.handlers.EntitySchemaHandler;
 import com.mozu.base.models.EntityDataTypes;
 import com.mozu.base.models.EntityScope;
-import com.mozu.logger.MozuAppLogger;
 
 /**
  * Manage the configuration setting in the Entity API
@@ -23,7 +25,8 @@ import com.mozu.logger.MozuAppLogger;
  */
 @Component
 public class ConfigHandler {
-    private static final MozuAppLogger logger = MozuAppLogger.getLogger(ConfigHandler.class);
+	private static final Logger logger = LoggerFactory
+			.getLogger(ConfigHandler.class);
 
     @Autowired
     EntitySchemaHandler entitySchemaHandler;
