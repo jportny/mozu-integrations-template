@@ -36,9 +36,6 @@ repositories {
     maven {
         url "https://oss.sonatype.org/content/groups/staging/"
     }
-    maven {
-        url "http://aus02bpnexs001.corp.volusion.com:8080/nexus/content/groups/public"
-    }   
 }
 
 configurations.all {
@@ -61,9 +58,8 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-webmvc', version: springVersion
     compile group: 'org.springframework', name: 'spring-test', version: springVersion
 
-    compile ("com.mozu:mozu-api-logger:1.0.0")
     
-    compile ("com.mozu:mozu-api-toolkit:1.0.18") {
+    compile ("com.mozu:mozu-api-toolkit:1.0.22") {
     	 exclude group: 'mysql'
         exclude group: 'xerces'
         exclude group: 'berkeleydb'
